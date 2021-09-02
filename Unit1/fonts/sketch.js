@@ -11,6 +11,6 @@ function draw() {
   textSize(48);
   text("hello World", 100,100);
   textFont(f2);
-  textSize(48);
-  text("I will RULE OVER THE HELLO WORLDOOOO!!",100,100);
+  textSize(28);
+  text("I will RULE OVER THE HELLO WORLDOOOO!!",10,200);
 }
