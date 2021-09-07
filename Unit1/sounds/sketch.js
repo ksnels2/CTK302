@@ -14,7 +14,9 @@ function draw() {
 }
 
 function mouseReleased() {
-  if {song1.isPlaying()) {
+
+  if (song1.isPlaying()) {
+      print("hello");
     song1.pause();
   } else {
     song1.loop();
