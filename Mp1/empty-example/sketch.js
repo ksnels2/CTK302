@@ -73,8 +73,8 @@ text("this is the CD hero and he is the one playing music for heros",50,300);
 
   // this shows mouse location - comment it out when you're done!
 
-  fill(0);
-  text(mouseX + ", " + mouseY, 40, 40);
+  //fill(0);
+  //text(mouseX + ", " + mouseY, 40, 40);
 
 }
 
