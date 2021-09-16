@@ -1,5 +1,6 @@
 
 let state = 0;
+let timer=0;
 
 function setup() {
   createCanvas(500, 500);
@@ -62,5 +63,11 @@ function draw() {
       }
     }
     break ;
+  }
+  timer++
+  if(timer>=5*60){
+    timer=0;
+    state++;
+    if(state>5)state = 0;
   }
 }
