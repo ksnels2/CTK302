@@ -22,19 +22,19 @@ function draw() {
   if (vol > .20) { // if the volume is LOUD?
     // do something
 
-    c = color(random(255), random(255), random(255)); // here I'm setting the background to a random color
+    c = color(random(255), blue(255), random(255)); // here I'm setting the background to a random color
   }
 
   // extra stuff for debugging
   textSize(18);
   text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
 
-  rect(vol * 100, 100, 50, 50);
+  ellipse(vol * 100, 100, 50, 50);
 
 //   rect(vol * 300, 150, 50, 50);
 
-//   x = map(vol, 0, .2, 0, width) ;
-//   rect(x, 200, 50, 50);
+ x = map(vol, 0, .2, 0, width) ;
+  rect(x, 200, 50, 50);
 
 }
 
