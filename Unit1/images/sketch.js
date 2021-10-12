@@ -12,5 +12,5 @@ function draw() {
 background('green');
 image(lol,width/2,height/2,100,100);
 image(stella,width/2,height/2-120,100,100);
-image(vanagurd,width/2,height/2-120,100,100);
+image(vanagurd,width/2,height/2+120,100,100);
 }
