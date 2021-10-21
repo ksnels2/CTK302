@@ -18,7 +18,7 @@ function draw() {
     case 0:
       text("click the square start", 100, 100);
       fill("red");
-      rect(100, 100, 100, 100);
+      rect(100, 100, 50, 25);
       break;
 
     case 1:
