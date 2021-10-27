@@ -4,9 +4,19 @@ let frogPos;
 let maxCars = 2 ;
 let timer = 0 ;
 let state = 0 ;
-
-
+let rock,rock1,rock2,rock3,rock4,rock5,rock6,star,truewin,welcome;
 function setup() {
+  rock =  loadImage("assets/rock.jpg");
+  rock1 =  loadImage("assets/rock1.jpg");
+  rock2 =  loadImage("assets/rock2.jpg");
+  rock3 =  loadImage("assets/rock3.jpg");
+  rock4 =  loadImage("assets/rock4.jpg");
+  rock5 =  loadImage("assets/rock5.jpg");
+  rock6 = loadImage("assets/rock6.jpg");
+  star =  loadImage("assets/star.jpg");
+  truewin =  loadImage("assets/truewin.jpg");
+  welcome =  loadImage("assets/welcome.jpg");
+  win =  loadImage("assets/win.jpg");
   createCanvas(windowWidth, windowHeight);
 imageMode(CENTER);
   // Spawn many objects
@@ -22,9 +32,10 @@ function draw() {
 
   switch(state){
     case 0://welcome state
-      background('red') ;
-      fill("black");
-      text("welcome",300,300);
+      background('black');
+      image(welcome,700,400,700,700)
+      //fill("black");
+      //text("welcome",300,300);
       break;
 
       case 1://game state
@@ -37,13 +48,15 @@ function draw() {
       break ;
 
       case 2:
-      background('red') ;
-      text("won",100,100)
+      background('black') ;
+      image(win,700,400,700,700)
+      //text("won",100,100)
       break ;
 
       case 3:
       background('blue') ;
-      text("lost",100,100)
+      image(truewin,700,400,700,700)
+      //text("lost",100,100)
       break ;
 
 
@@ -72,12 +85,12 @@ function draw() {
 
 function game() {
 
-  background('pink') ;
+  background('black') ;
    for (let i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].move();
 
-    if ((cars[i].pos.dist(frogPos)) < 50) {
+    if ((cars[i].pos.dist(frogPos)) < 150) {
       cars.splice(i, 1) ;
     }
   }
@@ -87,7 +100,7 @@ function game() {
   }
   // frog
   fill("green");
-  ellipse(frogPos.x, frogPos.y, 50, 50);
+  image(star,frogPos.x, frogPos.y, 50, 50);
   checkForKeys();
 }
 
@@ -119,9 +132,15 @@ class Car {
   // methods
 
   display() {
-    fill(this.col);
-    textSize(this.size);
-    text("HELLO", this.pos.x, this.pos.y);
+    //fill(this.col);
+    //textSize(this.size);
+    image(rock, this.pos.x, this.pos.y);
+    image(rock1, this.pos.x, this.pos.y);
+    image(rock2, this.pos.x, this.pos.y);
+    image(rock3, this.pos.x, this.pos.y);
+    image(rock4, this.pos.x, this.pos.y);
+    image(rock5, this.pos.x, this.pos.y);
+    image(rock6, this.pos.x, this.pos.y);
   }
 
   move() {
