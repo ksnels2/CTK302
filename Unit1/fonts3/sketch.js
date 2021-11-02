@@ -1,5 +1,4 @@
 
-
 var f1,f2;
 function setup() {
   createCanvas(500,500);
