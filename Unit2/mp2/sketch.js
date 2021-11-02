@@ -3,6 +3,7 @@ let timer = 0;
 let pizzza,meltCream,iceCream;
 function setup() {
   createCanvas(500, 500);
+  imageMode(CENTER);
   pizzza =  loadImage("assets/pizzza.jpg");
   meltCream =  loadImage("assets/meltedicecream.jpg");
   iceCream =  loadImage("assets/icecreamSunday.jpg");
@@ -16,22 +17,25 @@ function draw() {
   switch (state) {
 
     case 0:
+    fill("white")
       text("click the square start", 100, 100);
       fill("red");
       rect(100, 100, 50, 25);
       break;
 
     case 1:
-      text("tap the pizza to eat dessert", 100, 100);
-      image(pizzza,200,200,100,100);
+      //text("tap the pizza to eat dessert", 100, 100);
+      image(pizzza,width/2,height/2,width,height);
+        text("tap the pizza to eat dessert", 100, 100);
       if (touches.length==1){
         state=2;
       }
       break;
 
     case 2:
+      //text("the Icecream will melt fast", 100, 100);
+      image(iceCream,width/2,height/2,width,height);
       text("the Icecream will melt fast", 100, 100);
-      image(iceCream,200,200,100,100);
       timer++ ;
       if (timer > 360) {
         timer = 0 ;
@@ -39,8 +43,9 @@ function draw() {
       }
       break;
       case 3:
+      //text('melted Icecream',100,100) ;
+      image(meltCream,width/2,height/2,width,height);
       text('melted Icecream',100,100) ;
-      image(meltCream,200,200,100,100);
       timer++ ;
       if (timer > 360) {
         timer = 0 ;
